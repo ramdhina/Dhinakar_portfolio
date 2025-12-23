@@ -940,7 +940,7 @@ const Home = () => {
                 {
                   position: "Tea and snacks Stall - Server",
                   company: "Part Time",
-                  duration: "1992-1993",
+                  duration: "1995-1996",
                   location: "India",
                   type: "Part-time",
                   responsibilities: [

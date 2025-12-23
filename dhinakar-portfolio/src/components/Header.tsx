@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { AppBar, Box, Container, IconButton, Button } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import logo from '../assets/logos/dr_logo.png';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,6 +62,8 @@ const Header = () => {
             component="a"
             href="#home"
             sx={{
+              display: 'flex',
+              alignItems: 'center',
               fontSize: '1.5rem',
               fontWeight: 600,
               color: 'white',
@@ -69,7 +72,7 @@ const Header = () => {
               borderRadius: 0,
             }}
           >
-            Dhinakar .R
+            <img src={logo} alt="Logo" style={{ height: '175px', width: '175px' }} />
           </Box>
 
           {/* Desktop Menu */}
@@ -173,4 +176,4 @@ const Header = () => {
   );
 };
 
-export default Header; 
+export default Header;
