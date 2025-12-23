@@ -40,7 +40,7 @@ A sleek, responsive portfolio website built with React and Material-UI, featurin
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/nishanthdhina/portfolio-2.git
+https://github.com/ramdhina/Dhinakar_portfolio.git
    ```
 
 2. Navigate to the project directory:
