@@ -93,8 +93,8 @@ const Home = () => {
                     fontWeight: 500,
                   }}
                 >
-                  Global Solutions Architect
-                  <Box component="span" sx={{ color: 'secondary.main' }}> - Automotive & Manufacturing</Box>
+                  Global Solutions Architect - 
+                  <Box component="span" sx={{ color: '#3b82f6' }}>Industrial Technology</Box>
                 </Typography>
 
                 <Typography 
@@ -108,8 +108,7 @@ const Home = () => {
                     lineHeight: 1.6,
                   }}
                 >
-                  Driving digital transformation through IoT, AI, and cloud solutions. 
-                  Specializing in automotive manufacturing and supply chain innovation.
+                  I help organizations solve complex Industrial Technology (Automotive Manufacturing & Supply chain) challenges at global scale using AWS Cloud, IoT, and AI/ML powered solutions.
                 </Typography>
 
                 {/* Certification Badges */}
@@ -360,7 +359,7 @@ const Home = () => {
                 color: 'text.primary',
               }}
             >
-              Hi, I'm Dhinakar – a digital transformation enthusiast with a strong passion for leveraging emerging technologies like the Internet of Things (IoT) and Generative AI (GenAI) to drive innovation in the manufacturing and supply chain sectors.
+              I'm Dhinakar, a technology leader specializing in Cloud, IoT, and AI/ML implementations for manufacturing and supply chain operations. I focus on automotive and industrial sectors, where I develop solutions that increase operational efficiency and improve customer experience. 
             </Typography>
             
             <Typography 
@@ -371,7 +370,18 @@ const Home = () => {
                 color: 'text.primary',
               }}
             >
-              With a deep-rooted focus on Automotive and Industrial domains, I strive to deliver world-class solutions that not only optimize processes but also enhance the end-to-end customer experience. As a trusted technical advisor, I take a customer-centric approach—understanding each client's unique challenges and crafting tailored strategies that lead to tangible results.
+              As a technical advisor and solution architect, I collaborate with C-suite executives to transform their manufacturing and supply chain operations through data-driven technology adoption, delivering measurable business outcomes.
+            </Typography>
+            
+            <Typography 
+              variant="body1" 
+              sx={{ 
+                fontSize: { xs: '1.1rem', md: '1.25rem' },
+                lineHeight: 1.8,
+                color: 'text.primary',
+              }}
+            >
+              As I grow toward C-level leadership roles, my focus is on building high-performing technology teams, driving enterprise-wide tech strategy, and shaping the future of industries through innovation.
             </Typography>
           </Box>
 
@@ -587,14 +597,12 @@ const Home = () => {
                 </Box>
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
                   {[
-                    'GenAI',
+                    'Machine Learning',
                     'Generative AI with Large Language Models',
-                    'Artificial Intelligence (AI)',
+                    'Agentic & Physical AI',
                     'Internet of Things (IoT)',
-                    'AWS IoT',
                     'Digital Twin',
                     'Industry 4.0',
-                    'Integration',
                     'SOA',
                     'SQL',
                     'Data Analysis'
@@ -853,7 +861,7 @@ const Home = () => {
                 {
                   position: "Global Solutions Architect - Automotive & Manufacturing",
                   company: "Amazon Web Services (AWS)",
-                  duration: "Oct 2020 – Present (4 yrs 7 mos)",
+                  duration: "Oct 2020 – Present (5 yrs 3 mos)",
                   location: "Munich, Germany",
                   type: "Full-time",
                   responsibilities: [
@@ -938,13 +946,13 @@ const Home = () => {
                   ]
                 },
                 {
-                  position: "Tea and snacks Stall - Server",
-                  company: "Part Time",
-                  duration: "1995-1996",
-                  location: "India",
+                  position: "Computer Operator ",
+                  company: "MCC Bank",
+                  duration: "Sep 1997 – Jun 1997 (10 mos)",
+                  location: "Chennai Area, India",
                   type: "Part-time",
                   responsibilities: [
-                    "Delivering Tea and snacks to customers and cleaning"
+                    "Migration of ledger data (Hard Copy) to FoxPro DB by Manual Entry."
                   ]
                 }
               ].map((exp, index) => (

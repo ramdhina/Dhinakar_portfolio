@@ -70,6 +70,7 @@ const Header = () => {
               textDecoration: 'none',
               letterSpacing: '0.5px',
               borderRadius: 0,
+              marginLeft: { xs: 0, md: '-20px' },
             }}
           >
             <img src={logo} alt="Logo" style={{ height: '175px', width: '175px' }} />
