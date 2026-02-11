@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AppBar, Box, Container, IconButton, Button } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
@@ -6,6 +6,20 @@ import logo from '../assets/logos/dr_logo.png';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const menuItems = [
     { label: 'Home', href: '#home' },
@@ -41,7 +55,7 @@ const Header = () => {
           opacity: 1,
         },
       }}
-      className={window.scrollY > 50 ? 'scrolled' : ''}
+      className={isScrolled ? 'scrolled' : ''}
     >
       <Container 
         maxWidth="lg"
@@ -129,6 +143,7 @@ const Header = () => {
               padding: '8px',
             }}
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
           >
             {isOpen ? <CloseIcon /> : <MenuIcon />}
           </IconButton>

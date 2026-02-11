@@ -2,7 +2,7 @@ import { Box, Container, Typography, Paper, Chip, Button, IconButton } from '@mu
 import { motion } from 'framer-motion';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import profileImage from '../assets/profile.png';
+import profileImage from '../assets/profile_pic.png';
 import aiPractitioner from '../assets/certifications/aipractioner.png';
 import solutionsArchitectAssociate from '../assets/certifications/solutionsarchitectassociate.png';
 import solutionsArchitectPro from '../assets/certifications/solutionsarchitectprofessional.png';
