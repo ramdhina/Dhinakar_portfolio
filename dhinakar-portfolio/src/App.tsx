@@ -4,6 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Header from './components/Header';
 import Home from './pages/Home';
 import { Box } from '@mui/material';
+import { Analytics } from '@vercel/analytics/react';
 
 const theme = createTheme({
   palette: {
@@ -162,6 +163,10 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
             </Routes>
+          </Box>
+          {/* Analytics component at the bottom */}
+          <Box sx={{ width: '100%', textAlign: 'center', mt: 2 }}>
+            <Analytics />
           </Box>
         </Box>
       </Router>
