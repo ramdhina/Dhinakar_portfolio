@@ -2,8 +2,10 @@ import { Box, Container, Typography, Paper, Chip, Button, IconButton } from '@mu
 import { motion } from 'framer-motion';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import profileImage from '../assets/profile_pic.png';
+import profileImage from '../assets/profile_pic.jpg';
 import aiPractitioner from '../assets/certifications/aipractioner.png';
+import awsAiFoundational from '../assets/certifications/aws-ai-foundational.png';
+import awsIndustryReadyManufacturing from '../assets/certifications/aws-industry-ready-manufacturing.png';
 import solutionsArchitectAssociate from '../assets/certifications/solutionsarchitectassociate.png';
 import solutionsArchitectPro from '../assets/certifications/solutionsarchitectprofessional.png';
 import reinventImage from '../assets/events/reinvent.png';
@@ -61,6 +63,9 @@ const Home = () => {
                 flex: 1,
                 width: '100%',
                 textAlign: { xs: 'center', md: 'left' },
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: { xs: 'center', md: 'flex-start' },
               }}
             >
               <motion.div
@@ -71,7 +76,7 @@ const Home = () => {
                 <Typography 
                   variant="h1" 
                   sx={{ 
-                    fontSize: { xs: '2.5rem', md: '4rem' },
+                    fontSize: { xs: '2.25rem', md: '3.5rem' },
                     lineHeight: 1.1,
                     mb: 2,
                     background: 'linear-gradient(45deg, #f8fafc 30%, #60a5fa 90%)',
@@ -80,36 +85,73 @@ const Home = () => {
                     fontWeight: 700,
                   }}
                 >
-                  Dhinakar Ramamurthy
+                  Dhinakar
+                  <br />
+                  Ramamurthy
                 </Typography>
 
                 <Typography 
-                  variant="h2" 
+                  variant="h4" 
                   sx={{ 
-                    color: 'rgba(255, 255, 255, 0.9)',
-                    mb: 3,
-                    fontSize: { xs: '1.5rem', md: '2rem' },
-                    lineHeight: 1.3,
-                    fontWeight: 500,
+                    color: '#3b82f6',
+                    mb: 4,
+                    fontSize: { xs: '1rem', md: '1.5rem' },
+                    lineHeight: 1.4,
+                    fontWeight: 700,
+                    maxWidth: { xs: '100%', md: '720px' },
+                    mx: { xs: 'auto', md: 0 },
+                    textWrap: 'balance',
+                    whiteSpace: 'nowrap',
                   }}
                 >
-                  Global Solutions Architect - 
-                  <Box component="span" sx={{ color: '#3b82f6' }}>Industrial Technology</Box>
+                  Enterprise Digital & Physical AI Transformation Leader
+                  <Box
+                    component="span"
+                    sx={{
+                      display: 'block',
+                      mt: 1.5,
+                      color: 'rgba(255, 255, 255, 0.9)',
+                      fontSize: { xs: '0.95rem', md: '1.2rem' },
+                      fontWeight: 500,
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    Driving measurable enterprise value across manufacturing and supply chain
+                    <br />
+                    through AI, Edge-to-Cloud platforms, and modern digital operating models
+                  </Box>
                 </Typography>
-
                 <Typography 
                   variant="body1" 
                   sx={{ 
                     color: 'rgba(255, 255, 255, 0.7)',
-                    mb: 4,
+                    mb: 2,
                     fontSize: { xs: '1rem', md: '1.25rem' },
                     maxWidth: { xs: '100%', md: '600px' },
                     mx: { xs: 'auto', md: 0 },
                     lineHeight: 1.6,
+                    textWrap: 'pretty',
                   }}
                 >
-                  I help organizations solve complex Industrial Technology (Automotive Manufacturing & Supply chain) challenges at global scale using AWS Cloud, IoT, and AI/ML powered solutions.
+                  Information technology leader with 25+ years of experience partnering with global industrial organizations to modernize production and supply chain ecosystems. I focus on translating cloud, IoT, Machine Learning, and Generative AI capabilities into operational performance gains, decision velocity, and capital efficiency.
                 </Typography>
+                <Box
+                  component="ul"
+                  sx={{
+                    color: 'rgba(255, 255, 255, 0.75)',
+                    fontSize: { xs: '1rem', md: '1.2rem' },
+                    lineHeight: 1.6,
+                    maxWidth: { xs: '100%', md: '600px' },
+                    mx: { xs: 'auto', md: 0 },
+                    mb: 4,
+                    pl: { xs: 3, md: 4 },
+                    '& li': { mb: 0.5 },
+                  }}
+                >
+                  <Box component="li">Improving OEE and operational visibility at scale</Box>
+                  <Box component="li">Enabling AI-driven plant intelligence, including Physical AI </Box>
+                  <Box component="li">Aligning digital investment with enterprise ROI.</Box>
+                </Box>
 
                 {/* Certification Badges */}
                 <Box
@@ -166,6 +208,36 @@ const Home = () => {
                     }}
                     transition={{ duration: 0.2 }}
                   />
+                  <motion.img
+                    src={awsAiFoundational}
+                    alt="AWS AI Foundational"
+                    style={{
+                      width: '85px',
+                      height: '85px',
+                      objectFit: 'contain',
+                      filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      filter: 'drop-shadow(0 8px 12px rgba(0, 0, 0, 0.2))',
+                    }}
+                    transition={{ duration: 0.2 }}
+                  />
+                  <motion.img
+                    src={awsIndustryReadyManufacturing}
+                    alt="AWS Industry Ready Manufacturing"
+                    style={{
+                      width: '85px',
+                      height: '85px',
+                      objectFit: 'contain',
+                      filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))',
+                    }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      filter: 'drop-shadow(0 8px 12px rgba(0, 0, 0, 0.2))',
+                    }}
+                    transition={{ duration: 0.2 }}
+                  />
                 </Box>
 
                 {/* Action Buttons */}
@@ -174,6 +246,7 @@ const Home = () => {
                     display: 'flex', 
                     gap: 2, 
                     mb: 4,
+                    flexWrap: 'wrap',
                     justifyContent: { xs: 'center', md: 'flex-start' },
                   }}
                 >
@@ -196,7 +269,7 @@ const Home = () => {
                       transition: 'all 0.2s',
                     }}
                   >
-                    Get in Touch
+                    Connect on LinkedIn
                   </Button>
                   <Button
                     variant="outlined"
@@ -216,7 +289,7 @@ const Home = () => {
                       transition: 'all 0.2s',
                     }}
                   >
-                    Learn More
+                    View Insights
                   </Button>
                 </Box>
 
@@ -229,7 +302,7 @@ const Home = () => {
                   }}
                 >
                   <IconButton
-                    href="https://www.linkedin.com/in/dhinakarram/"
+                    href="https://www.linkedin.com/in/dhinakarramamurthy/"
                     target="_blank"
                     aria-label="LinkedIn Profile"
                     sx={{ 
@@ -359,7 +432,7 @@ const Home = () => {
                 color: 'text.primary',
               }}
             >
-              I'm Dhinakar, a technology leader specializing in Cloud, IoT, and AI/ML implementations for manufacturing and supply chain operations. I focus on automotive and industrial sectors, where I develop solutions that increase operational efficiency and improve customer experience. 
+              I lead large-scale digital and AI transformation initiatives for global manufacturing and supply chain enterprises, helping them modernize complex industrial operations into scalable, data-driven platforms with measurable business impact.
             </Typography>
             
             <Typography 
@@ -367,11 +440,51 @@ const Home = () => {
               sx={{ 
                 fontSize: { xs: '1.1rem', md: '1.25rem' },
                 lineHeight: 1.8,
+                mb: 4,
                 color: 'text.primary',
               }}
             >
-              As a technical advisor and solution architect, I collaborate with C-suite executives to transform their manufacturing and supply chain operations through data-driven technology adoption, delivering measurable business outcomes.
+              I operate at the intersection of enterprise strategy, AI platforms, and industrial execution, working closely with senior business and technology leaders to design and deliver multi-year transformation programs across manufacturing, logistics, and supply chain domains.
             </Typography>
+        
+            <Typography 
+              variant="body1" 
+              sx={{ 
+                fontSize: { xs: '1.1rem', md: '1.25rem' },
+                lineHeight: 1.8,
+                mb: 2,
+                color: 'text.primary',
+                fontWeight: 600,
+              }}
+            >
+              Key areas of ownership and impact includes:
+            </Typography>
+            <Box sx={{ mb: 4, mt: 0, color: 'text.primary' }}>
+              <Typography variant="body1" sx={{ fontSize: { xs: '1.1rem', md: '1.25rem' }, lineHeight: 1.8, mb: 2 }}>
+                <Box component="span" sx={{ fontWeight: 700 }}>
+                  1. Enterprise Digital & AI Strategy:
+                </Box>{' '}
+                Shape end-to-end digital and AI roadmaps for global industrial organizations, aligning cloud, data, IoT, and AI capabilities with business objectives such as operational efficiency, cost reduction, resilience, and sustainability.
+              </Typography>
+              <Typography variant="body1" sx={{ fontSize: { xs: '1.1rem', md: '1.25rem' }, lineHeight: 1.8, mb: 2 }}>
+                <Box component="span" sx={{ fontWeight: 700 }}>
+                  2. Platform-First Transformation Leadership:
+                </Box>{' '}
+                Drive platform-based modernization approaches that move customers beyond isolated pilots toward reusable, enterprise-wide digital and AI foundations spanning factory floors, logistics networks, and operational systems.
+              </Typography>
+              <Typography variant="body1" sx={{ fontSize: { xs: '1.1rem', md: '1.25rem' }, lineHeight: 1.8, mb: 2 }}>
+                <Box component="span" sx={{ fontWeight: 700 }}>
+                  3. Executive Advisory & Decision Support:
+                </Box>{' '}
+                Partner with VP- and C-level leaders to frame technology decisions in business terms, supporting investment prioritization, value governance, and long-term transformation planning.
+              </Typography>
+              <Typography variant="body1" sx={{ fontSize: { xs: '1.1rem', md: '1.25rem' }, lineHeight: 1.8 }}>
+                <Box component="span" sx={{ fontWeight: 700 }}>
+                  4. Enterprise Innovation Feedback Loop:
+                </Box>{' '}
+                Act as a strategic conduit between industrial customers and platform engineering teams, translating real-world operational challenges into product and capability improvements that better serve large-scale enterprise transformation needs.
+              </Typography>
+            </Box>
             
             <Typography 
               variant="body1" 
@@ -861,12 +974,12 @@ const Home = () => {
                 {
                   position: "Global Solutions Architect - Automotive & Manufacturing",
                   company: "Amazon Web Services (AWS)",
-                  duration: "Oct 2020 – Present (5 yrs 3 mos)",
+                  duration: "Oct 2020 – Present (5 yrs 5 mos)",
                   location: "Munich, Germany",
                   type: "Full-time",
                   responsibilities: [
-                    "Design solution architectures for automotive customers in manufacturing and supply chain.",
-                    "Develop solutions using IoT, Machine Learning, and GenAI.",
+                    "Partner with automotive manufacturing leaders to modernize digital operating models across production and supply chain ecosystems.",
+                    "Translate IoT, ML, and Generative AI capabilities into measurable improvements in OEE, resilience, and capital efficiency.",
                     "Act as a field CTO, providing product feedback to AWS engineering teams."
                   ]
                 },
@@ -1134,7 +1247,9 @@ const Home = () => {
                 mx: 'auto',
               }}
             >
-              Looking to discuss innovative solutions in automotive manufacturing or digital transformation? Connect with me on LinkedIn for professional inquiries and collaborations.
+              If you are navigating manufacturing modernization, AI adoption, or enterprise-scale digital transformation, I welcome strategic conversations with industry leaders and transformation teams.
+
+Connect with me on LinkedIn to exchange perspectives.
             </Typography>
 
             <Button
@@ -1142,7 +1257,7 @@ const Home = () => {
               color="primary"
               size="large"
               startIcon={<LinkedInIcon />}
-              href="https://www.linkedin.com/in/dhinakarram/"
+              href="https://www.linkedin.com/in/dhinakarramamurthy/"
               target="_blank"
               sx={{
                 py: 2,
